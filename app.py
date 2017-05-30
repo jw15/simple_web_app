@@ -4,7 +4,7 @@ app = Flask(__name__)
 # home page
 @app.route('/')
 def index():
-    return render_template('index.html', title='Hello!')
+    return render_template('index.html')
 
 @app.route('/more/')
 def more():
@@ -12,4 +12,4 @@ def more():
 
 
 if __name__ == '__main__':
-    app.run(host='0.0.0.0', port=8080, debug=True)
+    app.run(host='0.0.0.0', port=8105, threaded=True, debug=True)
